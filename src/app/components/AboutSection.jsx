@@ -19,9 +19,7 @@ const TAB_DATA = [
           hidden: { opacity: 0 },
           visible: {
             opacity: 1,
-            transition: {
-              staggerChildren: 0.2,
-            },
+            transition: { staggerChildren: 0.2 },
           },
         }}
       >
@@ -74,9 +72,7 @@ const TAB_DATA = [
           hidden: { opacity: 0 },
           visible: {
             opacity: 1,
-            transition: {
-              staggerChildren: 0.2,
-            },
+            transition: { staggerChildren: 0.2 },
           },
         }}
       >
@@ -111,9 +107,7 @@ const TAB_DATA = [
           hidden: { opacity: 0 },
           visible: {
             opacity: 1,
-            transition: {
-              staggerChildren: 0.2,
-            },
+            transition: { staggerChildren: 0.2 },
           },
         }}
       >
@@ -149,50 +143,59 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white" id="about">
+    <motion.section
+      className="text-white"
+      id="about"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, type: "spring" }}
+    >
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image
-          src="/images/about-image.png"
-          width={500}
-          height={500}
-          alt="About me image"
-          className="transition-all duration-500 ease-in-out transform hover:scale-105"
-        />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <Image
+            src="/images/about-image.png"
+            width={500}
+            height={500}
+            alt="About me image"
+            className="transition-all duration-500 ease-in-out transform hover:scale-105"
+          />
+        </motion.div>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <motion.h2
             className="text-4xl font-bold text-white mb-4"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
+            initial={{ opacity: 0, scale: 0.9, y: -20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
           >
             About Me
           </motion.h2>
           <p className="text-base lg:text-lg">
-          I am a tech enthusiast with a passion for developing effective solutions 
-          to real-world problems. My experience spans working with JavaScript, React, 
-          Redux, Node.js, Express, SQL, HTML, CSS, and Git. As a quick learner, 
-          I’m always eager to expand my knowledge and skill set. 
-          I thrive in collaborative environments and enjoy working with teams to build impactful and innovative applications.
+            I am a tech enthusiast with a passion for developing effective
+            solutions to real-world problems. My experience spans working with
+            JavaScript, React, Redux, Node.js, Express, SQL, HTML, CSS, and Git.
+            As a quick learner, I’m always eager to expand my knowledge and skill set.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
-              className="flex items-center gap-2 hover:scale-105 transition-transform duration-200"
             >
               Skills
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("education")}
               active={tab === "education"}
-              className="flex items-center gap-2 hover:scale-105 transition-transform duration-200"
             >
               Education
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("certifications")}
               active={tab === "certifications"}
-              className="flex items-center gap-2 hover:scale-105 transition-transform duration-200"
             >
               Certifications
             </TabButton>
@@ -210,7 +213,7 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
