@@ -168,11 +168,11 @@ const AboutSection = () => {
             About Me
           </motion.h2>
           <p className="text-base lg:text-lg">
-            I am a tech enthusiast with a passion for building effective solutions to real world problems! I have experience
-            working with JavaScript, React, Redux, Node.js, Express,
-            SQL, HTML, CSS, and Git. I am a quick learner and am always
-            looking to expand my knowledge and skill set. I am a team player and
-            excited to work with others to create amazing applications.
+          I am a tech enthusiast with a passion for developing effective solutions 
+          to real-world problems. My experience spans working with JavaScript, React, 
+          Redux, Node.js, Express, SQL, HTML, CSS, and Git. As a quick learner, 
+          I’m always eager to expand my knowledge and skill set. 
+          I thrive in collaborative environments and enjoy working with teams to build impactful and innovative applications.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
