@@ -35,9 +35,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Hello, I'm Ayushi Kumari pursuing BTech student at IIIT Allahabad passionate about 
-            coding and web development. My journey into technology began with a curiosity for
-            creating impactful real life solutions.
+          Hello, I’m Ayushi Kumari, a B.Tech student at IIIT Allahabad with a passion for coding and web development. My journey into technology began with a deep curiosity to create impactful, real-world solutions through innovation and problem-solving.
           </p>
           <div>
             <Link
